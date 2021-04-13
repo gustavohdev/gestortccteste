@@ -105,8 +105,8 @@ export default function Login(props) {
   }
 
   const handleLogin = async googleData => {
-    console.log(googleData);
-    console.log(googleData.tokenId);
+    //console.log(googleData);
+    //console.log(googleData.tokenId);
     /*const res = await fetch("/api/v1/auth/google", {
         method: "POST",
         body: JSON.stringify({
