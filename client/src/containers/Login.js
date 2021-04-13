@@ -219,7 +219,7 @@ export default function Login(props) {
           </Button>
           <GoogleLogin
             //clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-            clientId={'1050898059897-uhkdcd5qpl6so6lu8nk74j3rstsiqsuu.apps.googleusercontent.com'}
+            clientId={'1050898059897-mid4964gbhqiptdmsor1qk1ussdb0id5.apps.googleusercontent.com'}
             buttonText="Login com Google"
             onSuccess={handleLogin}
             onFailure={handleLogin}
