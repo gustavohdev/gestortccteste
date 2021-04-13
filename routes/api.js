@@ -9,7 +9,7 @@ const Car = require('../models/car');
 const Status = require('../models/status');
 const Os = require('../models/os');
 const { OAuth2Client } = require('google-auth-library')
-const client = new OAuth2Client(process.env.CLIENT_ID)
+const client = new OAuth2Client('1050898059897-uhkdcd5qpl6so6lu8nk74j3rstsiqsuu.apps.googleusercontent.com')
 
 // USERS
 router.get('/users', (req, res, next) => {
@@ -102,7 +102,7 @@ router.post('/auth/google', async (req, res, next) => {
 
     const ticket = await client.verifyIdToken({
       idToken: token,
-      audience: process.env.CLIENT_ID
+      audience: '1050898059897-uhkdcd5qpl6so6lu8nk74j3rstsiqsuu.apps.googleusercontent.com'
   });
     const { name, email, picture } = ticket.getPayload()
 
