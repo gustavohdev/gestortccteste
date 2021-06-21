@@ -5,8 +5,8 @@ export default function App() {
   
   return (
       <div className="App container">
-        <Routes />
+          <Routes />
       </div>
-    );
+  );
 
   }
