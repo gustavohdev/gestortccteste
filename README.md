@@ -1,30 +1,24 @@
-# node-react-starter
-A simple fullstack starter application using Node.js, Express.js, React.js and MongoDB
+# Gestor Mecânico
 
-To run this project you need to add the backend and frontend dependencies.
-In the root of the project run the following command
+Para rodar esse projeto você precisa adicionar as dependências de front e back
 
 ```
-$ npm install
-```
-
-Then, navigate to the client directory and run the following command:
+- "npm i" na raiz do projeto
+- "npm i' na pasta client
 
 ```
-recommended
-$ yarn
-```
-or
-```
-npm install
-```
 
-### Running the application
-
-*To run this application, you must have MongoDB up and running*
-
-To run the application, use the following command:
+após fazer a instalação dos pacotes, vá na pasta raiz e use:
 
 ```
-$ npm run dev
+- npm run dev
+
+```
+
+### Aplicativo rodando
+
+```
+- seu aplicativo estará rodando com base oficial de dados hospedada na nuvem.
+- disponibilizei o .env file aqui no app.
+
 ```
