@@ -40,9 +40,9 @@ const Client = (props) => {
     const columns = [
         { field: "id", headerName: "ID", width: 20 },
         { field: "name", headerName: "Nome", width: 130 },
-        { field: "surname", headerName: "Sobrenome", width: 130 },
-        { field: "email", headerName: "Email", width: 300 },
-        { field: "cellphone", headerName: "Telefone", width: 130 },
+        { field: "surname", headerName: "Sobrenome", width: 140 },
+        { field: "email", headerName: "Email", width: 250 },
+        { field: "cellphone", headerName: "Telefone", width: 140 },
     ];
 
     const handleOnSelectionChange = (e) => {

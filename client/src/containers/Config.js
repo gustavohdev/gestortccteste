@@ -64,7 +64,7 @@ const Config = (props) => {
                         },
                         {
                             field: "name",
-                            headerName: "brand",
+                            headerName: "Marca",
                             width: "100",
                         },
                     ]);
@@ -95,7 +95,7 @@ const Config = (props) => {
                         },
                         {
                             field: "name",
-                            headerName: "motor",
+                            headerName: "Motor",
                             width: "100",
                         },
                     ]);
