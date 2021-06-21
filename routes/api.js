@@ -421,7 +421,7 @@ router.patch("/cars", async (req, res, next) => {
 });
 
 // OS
-router.get("/os", (req, res, next) => {
+router.get("/os",  (req, res, next)  => {
     let companyid = req.query.companyid;
     Os.find({ companyid: companyid })
         .then((data) => res.json(data))

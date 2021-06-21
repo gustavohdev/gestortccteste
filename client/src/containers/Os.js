@@ -37,7 +37,8 @@ const Os = (props) => {
         { field: "plate", headerName: "Placa", width: 130 },
         { field: "motor", headerName: "Motor", width: 130 },
         { field: "status", headerName: "Status", width: 130 },
-        { field: "obs", headerName: "Obs", width: 300 },
+        { field: "updatedAt", headerName: "Atualizado Em", width: 150 },
+        { field: "obs", headerName: "Obs", width: 300 }
     ];
 
     const handleOnSelectionChange = (e) => {
@@ -148,8 +149,11 @@ const Os = (props) => {
             .then((resp) => {
                 for (let x = 0; x < resp.data.length; x++) {
                     resp.data[x]["id"] = x + 1;
+                    let myDate = new Date(resp.data[x].updatedAt)
+                    resp.data[x]['updatedAt'] = `${myDate.getDate()}/${parseInt(myDate.getMonth()) + 1}/${myDate.getFullYear()}`
                 }
 
+                console.log(resp.data)
                 setArrOs(resp.data);
             })
             .catch((err) => {
