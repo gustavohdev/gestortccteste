@@ -10,11 +10,12 @@ const Status = require("../models/status");
 const Os = require("../models/os");
 const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client("1050898059897-mid4964gbhqiptdmsor1qk1ussdb0id5.apps.googleusercontent.com");
+const Crypto = require('../helpers/Crypto')
 
 // USERS
 router.get("/users", (req, res, next) => {
     let username = req.query.username;
-    let password = req.query.password;
+    let password = Crypto.cipher(req.query.password);
     let companyid = req.query.companyid;
 
     if (!companyid) {
@@ -33,7 +34,7 @@ router.post("/users", (req, res, next) => {
         console.log(req.body);
         const username = req.body.username;
         const email = req.body.email;
-        const password = req.body.password;
+        const password = Crypto.cipher(req.body.password);
         const control = req.body.control;
         const usertype = req.body.usertype;
         const companyid = req.body.companyid;
