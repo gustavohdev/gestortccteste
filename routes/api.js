@@ -14,11 +14,12 @@ const Crypto = require('../helpers/Crypto')
 
 // USERS
 router.get("/users", (req, res, next) => {
-    let username = req.query.username;
-    let password = Crypto.cipher(req.query.password);
     let companyid = req.query.companyid;
 
     if (!companyid) {
+        let username = req.query.username;
+        let password = Crypto.cipher(req.query.password);
+
         User.find({ username: username, password: password })
             .then((data) => res.json(data))
             .catch((err) => res.status(401).json("Error: " + err));

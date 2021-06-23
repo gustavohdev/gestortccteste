@@ -58,7 +58,6 @@ const Team = (props) => {
                 password: password,
             })
             .then((resp) => {
-                console.log(resp);
                 window.location.reload(false);
             })
             .catch((err) => {
